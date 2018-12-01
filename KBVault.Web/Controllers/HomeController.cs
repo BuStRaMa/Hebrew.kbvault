@@ -66,7 +66,7 @@ namespace KBVault.Web.Controllers
             catch (Exception ex)
             {
                 Log.Error(ex);
-                return RedirectToAction("PublicError", "Error");
+                return RedirectToAction("Index", "Error");
             }
         }
 
@@ -90,7 +90,7 @@ namespace KBVault.Web.Controllers
             catch (Exception ex)
             {
                 Log.Error(ex);
-                return RedirectToAction("PublicError", "Error");
+                return RedirectToAction("Index", "Error");
             }
         }
 
@@ -115,7 +115,7 @@ namespace KBVault.Web.Controllers
             catch (Exception ex)
             {
                 Log.Error(ex);
-                return RedirectToAction("PublicError", "Error");
+                return RedirectToAction("Index", "Error");
             }
         }
 

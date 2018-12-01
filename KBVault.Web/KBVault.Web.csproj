@@ -875,8 +875,6 @@
     <Content Include="Install\default_kbvault.sql" />
     <Content Include="Install\update-version-0.45-to-0.5.sql" />
     <Content Include="Install\update-version-0.5-to-0.6.sql" />
-    <Content Include="logs\readme.txt" />
-    <Content Include="Lucene\Readme.txt" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -985,6 +983,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Assets\Themes\Default\fonts\" />
+    <Folder Include="logs\" />
+    <Folder Include="Lucene\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

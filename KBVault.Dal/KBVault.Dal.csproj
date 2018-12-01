@@ -54,23 +54,11 @@
   <ItemGroup>
     <Compile Include="Entities\Activities.cs" />
     <Compile Include="Entities\Article.cs" />
-    <Compile Include="Migrations\201610212009307_InitialCreate.cs" />
-    <Compile Include="Migrations\201610212009307_InitialCreate.Designer.cs">
-      <DependentUpon>201610212009307_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610212009563_addTotalArticleCountToSettings.cs" />
-    <Compile Include="Migrations\201610212009563_addTotalArticleCountToSettings.Designer.cs">
-      <DependentUpon>201610212009563_addTotalArticleCountToSettings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610231849434_AddeDIconForCategory.cs" />
-    <Compile Include="Migrations\201610231849434_AddeDIconForCategory.Designer.cs">
-      <DependentUpon>201610231849434_AddeDIconForCategory.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repository\ISettingsRepository.cs" />
     <Compile Include="Repository\SettingsRepository.cs" />
     <Compile Include="Types\SimilarArticle.cs" />
     <Compile Include="Types\TopTagItem.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repository\ArticleRepository.cs" />
     <Compile Include="Entities\ArticleTag.cs" />
     <Compile Include="Entities\Attachment.cs" />
@@ -95,17 +83,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610212009307_InitialCreate.resx">
-      <DependentUpon>201610212009307_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610212009563_addTotalArticleCountToSettings.resx">
-      <DependentUpon>201610212009563_addTotalArticleCountToSettings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610231849434_AddeDIconForCategory.resx">
-      <DependentUpon>201610231849434_AddeDIconForCategory.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
