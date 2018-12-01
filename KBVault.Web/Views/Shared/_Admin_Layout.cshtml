@@ -7,7 +7,7 @@
     KbUser CurrentUserInfo = KBVaultHelperFunctions.UserAsKbUser(Context.User);
 }
 <!DOCTYPE html>
-<html>
+<html dir="RTL">
 <head>
     <title>קיי.בי.וולט: @ViewBag.Title</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -24,11 +24,14 @@
 <body class="skin-blue">
 
     <header class="header">
-        <a href='@Url.Action("Index", "Dashboard")' class="logo">
-            <img src='@Url.Content("~/Assets/img/vault.png")' width="48" /> KBVault
-        </a>
-        <nav class="navbar navbar-static-top" role="navigation">
+        
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-left: 0">
             <div class="navbar-right">
+                <a href='@Url.Action("Index", "Dashboard")' class="logo">
+                    <img src='@Url.Content("~/Assets/img/vault.png")' width="48" /> KBVault
+                </a>
+            </div>
+            <div class="navbar-left">
                 <ul class="nav navbar-nav">
 
                     <li class="dropdown user user-menu">
@@ -56,6 +59,7 @@
             </div>
         </nav>
     </header>
+
     <div class="wrapper row-offcanvas row-offcanvas-left">
         <aside class="left-side sidebar-offcanvas">
             <section class="sidebar">
@@ -151,7 +155,7 @@
                 </ul>
             </section>
         </aside>
-        <aside class="right-side" dir="rtl">
+        <aside class="right-side" style="padding-right:220px" dir="rtl">
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 @RenderSection("ContentHeader", required: false)

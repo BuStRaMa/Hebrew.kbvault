@@ -80,7 +80,7 @@
                                         {
                                             <li>
                                                 <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
-                                                <a href='@Url.Action("Detail", "Home", new { id = article.SefName })'>@article.Title</a>
+                                                @Html.ActionLink(article.Title, "Detail", "Home", new { id = article.SefName }, null);
                                             </li>
                                         }
                                     </ul>
