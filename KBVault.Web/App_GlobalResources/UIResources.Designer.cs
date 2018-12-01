@@ -178,6 +178,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Author.
+        /// </summary>
+        internal static string ArticleAuthor {
+            get {
+                return ResourceManager.GetString("ArticleAuthor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Article.
         /// </summary>
         internal static string ArticleCreatePageArticleTabTitle {
@@ -430,6 +439,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Article ID.
+        /// </summary>
+        internal static string ArticleID {
+            get {
+                return ResourceManager.GetString("ArticleID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Likes.
+        /// </summary>
+        internal static string ArticleLikes {
+            get {
+                return ResourceManager.GetString("ArticleLikes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Article liked..
         /// </summary>
         internal static string ArticleLikeSuccess {
@@ -444,6 +471,15 @@ namespace Resources {
         internal static string ArticleSefNameIsRequired {
             get {
                 return ResourceManager.GetString("ArticleSefNameIsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Views.
+        /// </summary>
+        internal static string ArticleViews {
+            get {
+                return ResourceManager.GetString("ArticleViews", resourceCulture);
             }
         }
         

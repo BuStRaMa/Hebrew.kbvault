@@ -561,4 +561,16 @@
   <data name="UserLastName" xml:space="preserve">
     <value>Last Name</value>
   </data>
+  <data name="ArticleAuthor" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="ArticleID" xml:space="preserve">
+    <value>Article ID</value>
+  </data>
+  <data name="ArticleLikes" xml:space="preserve">
+    <value>Likes</value>
+  </data>
+  <data name="ArticleViews" xml:space="preserve">
+    <value>Views</value>
+  </data>
 </root>

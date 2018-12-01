@@ -561,4 +561,16 @@
   <data name="UserLastName" xml:space="preserve">
     <value>שם משפחה</value>
   </data>
+  <data name="ArticleAuthor" xml:space="preserve">
+    <value>כותב המאמר</value>
+  </data>
+  <data name="ArticleID" xml:space="preserve">
+    <value>מזהה מאמר</value>
+  </data>
+  <data name="ArticleLikes" xml:space="preserve">
+    <value>סימנו אהבתי</value>
+  </data>
+  <data name="ArticleViews" xml:space="preserve">
+    <value>צפיות במאמר</value>
+  </data>
 </root>
