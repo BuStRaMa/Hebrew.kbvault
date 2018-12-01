@@ -555,4 +555,10 @@
   <data name="ArticleCreatePageRemoveAttachment" xml:space="preserve">
     <value>Deletes attachment.</value>
   </data>
+  <data name="UserFirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="UserLastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
 </root>

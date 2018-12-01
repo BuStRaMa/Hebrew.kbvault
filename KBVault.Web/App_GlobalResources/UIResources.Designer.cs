@@ -1213,6 +1213,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to First Name.
+        /// </summary>
+        internal static string UserFirstName {
+            get {
+                return ResourceManager.GetString("UserFirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Name.
+        /// </summary>
+        internal static string UserLastName {
+            get {
+                return ResourceManager.GetString("UserLastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Create User.
         /// </summary>
         internal static string UserListAddNewUser {
