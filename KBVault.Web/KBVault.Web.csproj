@@ -196,6 +196,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\CommonResources.he.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonResources.he.resx</DependentUpon>
+    </Compile>
     <Compile Include="App_GlobalResources\CommonResources.pt-BR.designer.cs">
       <DependentUpon>CommonResources.pt-BR.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -211,6 +216,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="App_GlobalResources\ErrorMessages.he.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorMessages.he.resx</DependentUpon>
+    </Compile>
     <Compile Include="App_GlobalResources\ErrorMessages.pt-BR.designer.cs">
       <DependentUpon>ErrorMessages.pt-BR.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -225,6 +235,11 @@
       <DependentUpon>ErrorMessages.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\UIResources.he.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UIResources.he.resx</DependentUpon>
     </Compile>
     <Compile Include="App_GlobalResources\UIResources.pt-BR.designer.cs">
       <DependentUpon>UIResources.pt-BR.resx</DependentUpon>
@@ -1032,6 +1047,20 @@
     <Analyzer Include="..\packages\codecracker.CSharp.1.0.3\analyzers\dotnet\cs\CodeCracker.CSharp.dll" />
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\CommonResources.he.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>CommonResources.he.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\ErrorMessages.he.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ErrorMessages.he.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\UIResources.he.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UIResources.he.designer.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
