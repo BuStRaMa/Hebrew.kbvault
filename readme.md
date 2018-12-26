@@ -33,7 +33,7 @@ Check [Documentation](https://github.com/burki169/kbvault/wiki) for installation
 
 Homepage
 
- ![](https://archive.codeplex.com/projects/kbvault/1a5666af-d5ab-461d-be82-d6e5435221e7)
+ ![](https://imgur.com/nsBLGDz)
 
 Frontend For Nested Categories
 
