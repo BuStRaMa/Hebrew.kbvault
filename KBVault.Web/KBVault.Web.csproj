@@ -475,7 +475,6 @@
     <Content Include="Assets\img\ajax-loader.gif" />
     <Content Include="Assets\img\ajax-loader1.gif" />
     <Content Include="Assets\img\bar-ajax-loader.gif" />
-    <Content Include="Assets\js\ArticleCreate.js" />
     <Content Include="Assets\js\plugins\cookie\jquery.cookie.js" />
     <Content Include="Assets\js\plugins\smartmenus\jquery.smartmenus.bootstrap.js" />
     <Content Include="Assets\js\plugins\smartmenus\jquery.smartmenus.js" />
@@ -656,8 +655,6 @@
     <Content Include="BackupArchives\index.html" />
     <Content Include="Global.asax" />
     <Content Include="Install\default_kbvault.sql" />
-    <Content Include="Install\update-version-0.45-to-0.5.sql" />
-    <Content Include="Install\update-version-0.5-to-0.6.sql" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
