@@ -84,6 +84,8 @@ namespace KBVault.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
+        [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult Edit([Bind(Exclude = "Category.Name,Category.SefName")]ArticleViewModel model)
         {
             try
@@ -145,6 +147,8 @@ namespace KBVault.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateInput(false)]
+        [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult Create([Bind(Exclude = "Category.Name,Category.SefName")]ArticleViewModel model)
         {
             try
