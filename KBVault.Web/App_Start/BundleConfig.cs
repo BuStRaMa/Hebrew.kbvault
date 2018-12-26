@@ -19,7 +19,7 @@ namespace KBVault.Web
                 "~/Assets/datatables/js/jquery.dataTables.js",
                 "~/Assets/js/plugins/uploader/jquery.uploadfile.js",
                 "~/Assets/js/AdminLTE/app.js",
-                "~/Assets/ckeditor/ckeditor.js",
+                "~/Assets/tinymce/tinymce.min.js",
                 "~/Scripts/jquery.signalR-2.2.1.js",
                 "~/Assets/js/kbvault.js"));
 
