@@ -33,16 +33,16 @@ Check [Documentation](https://github.com/burki169/kbvault/wiki) for installation
 
 Homepage
 
- ![](https://imgur.com/nsBLGDz)
+ ![Imgur](https://i.imgur.com/nsBLGDz.png)
 
 Frontend For Nested Categories
 
- ![](https://archive.codeplex.com/projects/kbvault/f4fa47d6-2c7f-4d20-921c-42f41713a0a7)
+ ![Imgur](https://i.imgur.com/kBk3h1t.png)
 
 Edit Article
 
- ![](https://archive.codeplex.com/projects/kbvault/9c30dd7b-c9e0-4f85-99bb-92583b3c74b0)
+ ![Imgur](https://i.imgur.com/MAnhT3G.png)
 
 Dashboard
 
- ![](https://archive.codeplex.com/projects/kbvault/1e6787c1-9b30-4671-a93a-c765535cff76)
+ ![Imgur](https://i.imgur.com/6OnZ5jy.png)
