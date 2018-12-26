@@ -1,18 +1,12 @@
 ## KBVault - Free Knowledge Base Application 
 
-[![Build status](https://ci.appveyor.com/api/projects/status/m2qm8h1685o1lv18/branch/master?svg=true)](https://ci.appveyor.com/project/2b-proje-evi/kbvault/branch/master)
-
 *KBVault* is a free , simple yet efficient and easy to use knowledge base application. 
-
-*Should we tag Kbvault as v1.0? Please vote :) http://www.poll-maker.com/poll1297x6aFB4f8A-53*
-
-Feel free to provide feedback for bugs and features. Help me to make something useful and yet be simple.
 
 *Features*
 
 * Bootstrap framework both for backend and frontend visual stuff.
 * Uses MSSQL (SQL Express Edition| Developer Edition|....)
-* Easy to use HTML Editor (CKEditor)
+* Easy to use HTML Editor ([TinyMCE](https://www.tiny.cloud/))
 * Scheduled publishing ( Specify article publication date and expiry date )
 * Save articles as draft
 * Keep track of article views and likes
@@ -39,16 +33,16 @@ Check [Documentation](https://github.com/burki169/kbvault/wiki) for installation
 
 Homepage
 
- ![](https://burki169.github.io/kbvault/docs/images/autocomplete.png)
+ ![](https://archive.codeplex.com/projects/kbvault/1a5666af-d5ab-461d-be82-d6e5435221e7)
 
 Frontend For Nested Categories
 
- ![](https://burki169.github.io/kbvault/docs/images/multimenu.png)
+ ![](https://archive.codeplex.com/projects/kbvault/f4fa47d6-2c7f-4d20-921c-42f41713a0a7)
 
 Edit Article
 
- ![](https://burki169.github.io/kbvault/docs/images/edit_article.png)
+ ![](https://archive.codeplex.com/projects/kbvault/9c30dd7b-c9e0-4f85-99bb-92583b3c74b0)
 
 Dashboard
 
- ![](https://burki169.github.io/kbvault/docs/images/dashboard.png)
+ ![](https://archive.codeplex.com/projects/kbvault/1e6787c1-9b30-4671-a93a-c765535cff76)
