@@ -1,18 +1,12 @@
 ## KBVault - Free Knowledge Base Application 
 
-[![Build status](https://ci.appveyor.com/api/projects/status/m2qm8h1685o1lv18/branch/master?svg=true)](https://ci.appveyor.com/project/2b-proje-evi/kbvault/branch/master)
-
 *KBVault* is a free , simple yet efficient and easy to use knowledge base application. 
-
-*Should we tag Kbvault as v1.0? Please vote :) http://www.poll-maker.com/poll1297x6aFB4f8A-53*
-
-Feel free to provide feedback for bugs and features. Help me to make something useful and yet be simple.
 
 *Features*
 
 * Bootstrap framework both for backend and frontend visual stuff.
 * Uses MSSQL (SQL Express Edition| Developer Edition|....)
-* Easy to use HTML Editor (CKEditor)
+* Easy to use HTML Editor ([TinyMCE](https://www.tiny.cloud/))
 * Scheduled publishing ( Specify article publication date and expiry date )
 * Save articles as draft
 * Keep track of article views and likes
@@ -39,16 +33,16 @@ Check [Documentation](https://github.com/burki169/kbvault/wiki) for installation
 
 Homepage
 
- ![](https://burki169.github.io/kbvault/docs/images/autocomplete.png)
+ ![Imgur](https://i.imgur.com/nsBLGDz.png)
 
 Frontend For Nested Categories
 
- ![](https://burki169.github.io/kbvault/docs/images/multimenu.png)
+ ![Imgur](https://i.imgur.com/kBk3h1t.png)
 
 Edit Article
 
- ![](https://burki169.github.io/kbvault/docs/images/edit_article.png)
+ ![Imgur](https://i.imgur.com/MAnhT3G.png)
 
 Dashboard
 
- ![](https://burki169.github.io/kbvault/docs/images/dashboard.png)
+ ![Imgur](https://i.imgur.com/6OnZ5jy.png)
