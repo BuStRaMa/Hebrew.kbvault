@@ -1,10 +1,9 @@
-## KBVault - Free Knowledge Base Application 
-
-*KBVault* is a free , simple yet efficient and easy to use knowledge base application. 
-
-*Features*
-
-* Bootstrap framework both for backend and frontend visual stuff.
+<div dir=rtl>
+ <h2> KBVault - מערכת לניהול מידע חינמית </h2>
+ KBVault היא חינמית, פשוטה אך יעילה וקלה לשימוש
+ 
+ <h3> פיצ'רים </h3>
+ * Bootstrap framework both for backend and frontend visual stuff.
 * Uses MSSQL (SQL Express Edition| Developer Edition|....)
 * Easy to use HTML Editor ([TinyMCE](https://www.tiny.cloud/))
 * Scheduled publishing ( Specify article publication date and expiry date )
@@ -25,24 +24,20 @@
 * Primitive backup/restore feature 
 * Built with ASP.NET MVC.
 
-*Installation*
+<h3> התקנה </h3>
+בדוק <a href="https://github.com/BuStRaMa/Hebrew.kbvault/wiki"> ויקי </a> עבור הסבר
 
-Check [Documentation](https://github.com/burki169/kbvault/wiki) for installation instructions
+<h3> צילומי מסך </h3>
 
-*Screenshots*
-
-Homepage
-
- ![Imgur](https://i.imgur.com/nsBLGDz.png)
+דף הבית
+<img src="https://i.imgur.com/nsBLGDz.png" />
 
 Frontend For Nested Categories
-
- ![Imgur](https://i.imgur.com/kBk3h1t.png)
-
-Edit Article
-
- ![Imgur](https://i.imgur.com/MAnhT3G.png)
-
+<img src="https://i.imgur.com/kBk3h1t.png" />
+ 
+ Edit Article
+ <img src="https://i.imgur.com/MAnhT3G.png" />
+ 
 Dashboard
-
- ![Imgur](https://i.imgur.com/6OnZ5jy.png)
+<img src="https://i.imgur.com/6OnZ5jy.png" />
+</div>
