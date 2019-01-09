@@ -8,7 +8,7 @@ namespace KBVault.Web
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
         public static void RegisterBundles(BundleCollection bundles)
         {
-            BundleTable.EnableOptimizations = true;
+            BundleTable.EnableOptimizations = false;
 
             bundles.Add(new ScriptBundle("~/admin/js").Include(
                 "~/Assets/js/jquery/jquery-2-0-2.js",

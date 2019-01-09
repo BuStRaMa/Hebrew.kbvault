@@ -26,7 +26,8 @@ namespace KBVault.Web.Business.ApplicationSettings
                 AnalyticsAccount = settings.AnalyticsAccount,
                 Author = KBVaultHelperFunctions.UserAsKbUser(HttpContext.Current.User).Id,
                 BackupPath = settings.BackupPath,
-                ShowTotalArticleCountOnFrontPage = settings.ShowTotalArticleCountOnFrontPage
+                ShowTotalArticleCountOnFrontPage = settings.ShowTotalArticleCountOnFrontPage,
+                LockSite = settings.LockSite
             };
 
             if (!string.IsNullOrEmpty(set.BackupPath))

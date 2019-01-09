@@ -274,13 +274,13 @@
     <value>הסר תגית ?</value>
   </data>
   <data name="SettingsPageSaveSuccessfull" xml:space="preserve">
-    <value>הגדרות נשמרו בהצלחה.</value>
+    <value>הגדרות נשמרו בהצלחה</value>
   </data>
   <data name="SettingsPageArticleCountNumericErrorMessage" xml:space="preserve">
     <value>ספירת מאמרים חייבת להיות מספרית</value>
   </data>
   <data name="SettingsPageArticlePerCatLabel" xml:space="preserve">
-    <value>כמות מאמרים פר תגית בעמוד הנחיתה.</value>
+    <value>כמות מאמרים פר תגית בעמוד הנחיתה</value>
   </data>
   <data name="SettingsPageDisqusShortNameLabel" xml:space="preserve">
     <value>דיסקוס שם קצר</value>
@@ -289,10 +289,10 @@
     <value>טקסט ג'מבוטרון</value>
   </data>
   <data name="SettingsPageShareThisKeyLabel" xml:space="preserve">
-    <value>שתף מפתח פומבי זה.</value>
+    <value>שתף מפתח פומבי זה</value>
   </data>
   <data name="SettingsPageTagLineLabel" xml:space="preserve">
-    <value>קו תגית.</value>
+    <value>קו תגית</value>
   </data>
   <data name="ArticleCreatePageCreateSuccessMessage" xml:space="preserve">
     <value>מאמר הועלה בהצלחה</value>
@@ -301,10 +301,10 @@
     <value>מאמר עודכן בהצלחה!</value>
   </data>
   <data name="CategoryPageCreateSuccessMessage" xml:space="preserve">
-    <value>קטגוריה נוספה בהצלחה.</value>
+    <value>קטגוריה נוספה בהצלחה</value>
   </data>
   <data name="CategoryPageEditSuccessMessage" xml:space="preserve">
-    <value>קטגוריה עודכנה בהצלחה.</value>
+    <value>קטגוריה עודכנה בהצלחה</value>
   </data>
   <data name="UserListHeader" xml:space="preserve">
     <value>משתמשי מערכת</value>
@@ -376,7 +376,7 @@
     <value>לא ניתן לערוך פרופיל</value>
   </data>
   <data name="UserProfileUpdateSuccessful" xml:space="preserve">
-    <value>פרופיל עודכן בהצלחה.</value>
+    <value>פרופיל עודכן בהצלחה</value>
   </data>
   <data name="ArticleCreatePageSefNameLabel" xml:space="preserve">
     <value>שם חיפוש ידידותי</value>
@@ -394,10 +394,10 @@
     <value>מאמרים ב{0}</value>
   </data>
   <data name="PublicILikeThis" xml:space="preserve">
-    <value>אני אוהב את זה.</value>
+    <value>אני אוהב את זה</value>
   </data>
   <data name="PublicShareThisTitle" xml:space="preserve">
-    <value>שתף מאמר זה.</value>
+    <value>שתף מאמר זה</value>
   </data>
   <data name="PublicTagListPageTitle" xml:space="preserve">
     <value>מאמרים בעלי תגית {0}</value>
@@ -412,7 +412,7 @@
     <value>סיומות קבצים שייכללו באינדקס (.pdf, .dox, .docx ...)</value>
   </data>
   <data name="ArticleLikeSuccess" xml:space="preserve">
-    <value>מאמר נאהב.</value>
+    <value>מאמר נאהב</value>
   </data>
   <data name="SearchResultTitle" xml:space="preserve">
     <value>תוצאות עבור {0}</value>
@@ -553,7 +553,7 @@
     <value>הורד קובץ מצורף</value>
   </data>
   <data name="ArticleCreatePageRemoveAttachment" xml:space="preserve">
-    <value>מוחק קבצים מצורפים.</value>
+    <value>מוחק קבצים מצורפים</value>
   </data>
   <data name="UserFirstName" xml:space="preserve">
     <value>שם פרטי</value>
@@ -572,5 +572,8 @@
   </data>
   <data name="ArticleViews" xml:space="preserve">
     <value>צפיות במאמר</value>
+  </data>
+  <data name="LockSite" xml:space="preserve">
+    <value>נעל אתר עבור אורחים</value>
   </data>
 </root>

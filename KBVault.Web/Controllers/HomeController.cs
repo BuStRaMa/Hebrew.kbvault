@@ -5,6 +5,7 @@ using System.Web.Mvc;
 using KBVault.Dal;
 using KBVault.Dal.Entities;
 using KBVault.Dal.Repository;
+using KBVault.Web.Helpers;
 using KBVault.Web.Models;
 using KBVault.Web.Models.Public;
 using MvcPaging;
@@ -12,6 +13,7 @@ using Resources;
 
 namespace KBVault.Web.Controllers
 {
+    [SiteLock]
     public class HomeController : KbVaultPublicController
     {
         private const int ArticleCountPerPage = 20;

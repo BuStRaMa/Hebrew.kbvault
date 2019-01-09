@@ -38,6 +38,8 @@ namespace KBVault.Dal.Entities
 
         public bool ShowTotalArticleCountOnFrontPage { get; set; }
 
+        public bool LockSite { get; set; }
+
         public virtual Entities.KbUser KbUser { get; set; }
     }
 }

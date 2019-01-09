@@ -27,6 +27,7 @@ namespace KBVault.Web.Models
                 this.AnalyticsAccount = set.AnalyticsAccount;
                 this.BackupPath = set.BackupPath;
                 this.ShowTotalArticleCountOnFrontPage = set.ShowTotalArticleCountOnFrontPage;
+                this.LockSite = set.LockSite;
                 Themes = new List<string>();
             }
         }
@@ -55,6 +56,8 @@ namespace KBVault.Web.Models
         public string BackupPath { get; set; }
 
         public bool ShowTotalArticleCountOnFrontPage { get; set; }
+
+        public bool LockSite { get; set; }
 
         public string SelectedTheme { get; set; }
 

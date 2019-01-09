@@ -573,4 +573,7 @@
   <data name="ArticleViews" xml:space="preserve">
     <value>Views</value>
   </data>
+  <data name="LockSite" xml:space="preserve">
+    <value>Lock site for guests</value>
+  </data>
 </root>

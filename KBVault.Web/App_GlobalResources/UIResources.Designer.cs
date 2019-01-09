@@ -907,6 +907,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Lock site for guests.
+        /// </summary>
+        internal static string LockSite {
+            get {
+                return ResourceManager.GetString("LockSite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
         internal static string LoginFormHeader {

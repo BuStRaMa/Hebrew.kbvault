@@ -54,6 +54,10 @@
   <ItemGroup>
     <Compile Include="Entities\Activities.cs" />
     <Compile Include="Entities\Article.cs" />
+    <Compile Include="Migrations\201901091725079_LockSite.cs" />
+    <Compile Include="Migrations\201901091725079_LockSite.Designer.cs">
+      <DependentUpon>201901091725079_LockSite.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repository\ISettingsRepository.cs" />
     <Compile Include="Repository\SettingsRepository.cs" />
@@ -87,6 +91,11 @@
   <ItemGroup>
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
     <Analyzer Include="..\packages\StyleCop.Analyzers.1.0.2\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201901091725079_LockSite.resx">
+      <DependentUpon>201901091725079_LockSite.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
