@@ -117,6 +117,31 @@ namespace KBVault.Core.MVC.Authorization
             }
         }
 
+        public static void AdminChangePassword(long id, string newPassword)
+        {
+            try
+            {
+                using (var db = new KbVaultContext())
+                {
+                    KbUser usr = db.KbUsers.FirstOrDefault(ku => ku.Id == id);
+                    if (usr != null)
+                    {
+                        usr.Password = HashPassword(newPassword, Guid.NewGuid().ToString().Replace("-", string.Empty));
+                        db.SaveChanges();
+                    }
+                    else
+                    {
+                        throw new UserNotFoundException();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex);
+                throw;
+            }
+        }
+
         private static bool VerifyHash(string password, string passwordHash)
         {
             return ObviexSimpleHash.VerifyHash(password, HashAlgoritm, passwordHash);

@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using System.Web.Security;
 using KBVault.Core.MVC.Authorization;
 using KBVault.Dal;
+using KBVault.Dal.Entities;
 using KBVault.Web.Helpers;
 using KBVault.Web.Models;
 using Resources;
-using KbUser = KBVault.Dal.Entities.KbUser;
 
 namespace KBVault.Web.Controllers
 {
@@ -159,7 +158,14 @@ namespace KBVault.Web.Controllers
             {
                 using (var db = new KbVaultContext())
                 {
+                    // Update all articles owned by deleted user
+                    var admin = db.KbUsers.First(a => a.Role == "Admin").Id;
+                    KBVaultHelperFunctions.UpdateArticlesOwner(id, admin);
+                    //KBVaultHelperFunctions.UpdateActivitiesOwner(id);
+
+                    // Delete user after updating articles
                     db.KbUsers.Remove(db.KbUsers.First(u => u.Id == id));
+
                     db.SaveChanges();
                     result.Successful = true;
                 }
@@ -176,10 +182,11 @@ namespace KBVault.Web.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Admin")]
-        public ActionResult UserInfo(KbUserViewModel model)
+        public ActionResult UserInfo([Bind(Exclude = "OldPassword")]KbUserViewModel model)
         {
             try
             {
+                ModelState.Remove("OldPassword");
                 if (ModelState.IsValid)
                 {
                     using (var db = new KbVaultContext())
@@ -191,21 +198,18 @@ namespace KBVault.Web.Controllers
                             return View(model);
                         }
 
-                        if (KbVaultAuthHelper.ValidateUser(model.UserName, model.OldPassword))
+                        usr.Name = model.Name;
+                        usr.LastName = model.LastName;
+                        usr.Role = model.Role;
+                        usr.Email = model.Email;
+                        if (!string.IsNullOrEmpty(model.NewPassword) && model.NewPassword == model.NewPasswordAgain)
                         {
-                            usr.Name = model.Name;
-                            usr.LastName = model.LastName;
-                            usr.Role = model.Role;
-                            usr.Email = model.Email;
-                            if (!string.IsNullOrEmpty(model.NewPassword) && model.NewPassword == model.NewPasswordAgain)
-                            {
-                                KbVaultAuthHelper.ChangePassword(model.UserName, model.OldPassword, model.NewPassword);
-                            }
-
-                            db.SaveChanges();
-                            ShowOperationMessage(UIResources.UserListUserEditSuccessful);
-                            return RedirectToAction("Users");
+                            KbVaultAuthHelper.AdminChangePassword(usr.Id, model.NewPassword);
                         }
+
+                        db.SaveChanges();
+                        ShowOperationMessage(UIResources.UserListUserEditSuccessful);
+                        return RedirectToAction("Users");
                     }
                 }
 
@@ -244,7 +248,7 @@ namespace KBVault.Web.Controllers
             }
         }
 
-        [Authorize(Roles="Admin")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Users()
         {
             try

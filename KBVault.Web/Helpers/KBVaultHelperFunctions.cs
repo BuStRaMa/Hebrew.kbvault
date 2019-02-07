@@ -132,6 +132,54 @@ namespace KBVault.Web.Helpers
             }
         }
 
+        public static void UpdateArticlesOwner(long oldOwnerId, long newOwnerId)
+        {
+            try
+            {
+                using (var db = new KbVaultContext())
+                {
+                    // Update all articles owned by deleted user
+                    var articles = db.Articles.Where(a => a.Author == oldOwnerId);
+                    foreach (var article in articles)
+                    {
+                        article.Author = newOwnerId;
+                    }
+
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex);
+                throw;
+            }
+        }
+
+        /*
+        public static void UpdateActivitiesOwner(long oldOwnerId)
+        {
+            try
+            {
+                using (var db = new KbVaultContext())
+                {
+                    // remove all activities owned by deleted user
+                    var activities = db.Activities.Where(a => a.UserId == oldOwnerId);
+                    foreach (var activity in activities)
+                    {
+                        activity.UserId = 0;
+                    }
+
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex);
+                throw;
+            }
+        }
+        */
+
         private static string GetCategoryMenu(long parentCategoryId = -1, bool isEditor = false, long userId = 1)
         {
             try
