@@ -880,6 +880,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to My Articles.
+        /// </summary>
+        internal static string LeftSidebarMyArticles {
+            get {
+                return ResourceManager.GetString("LeftSidebarMyArticles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
         internal static string LeftSideBarSettings {

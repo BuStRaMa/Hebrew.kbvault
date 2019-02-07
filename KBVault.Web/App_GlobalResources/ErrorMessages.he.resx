@@ -147,6 +147,9 @@
   <data name="FileUploadTooManyFiles" xml:space="preserve">
     <value>ניתן להעלות רק קובץ אחד</value>
   </data>
+  <data name="LeftSidebarMyArticles" xml:space="preserve">
+    <value>המאמרים שלי</value>
+  </data>
   <data name="LoginFailed" xml:space="preserve">
     <value>שם משתמש או סיסמה שגויים</value>
   </data>

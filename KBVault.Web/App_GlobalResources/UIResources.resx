@@ -576,4 +576,7 @@
   <data name="LockSite" xml:space="preserve">
     <value>Lock site for guests</value>
   </data>
+  <data name="LeftSidebarMyArticles" xml:space="preserve">
+    <value>My Articles</value>
+  </data>
 </root>
