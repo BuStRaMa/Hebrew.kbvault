@@ -1,20 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.Core.Objects;
-using System.Data.Entity.Infrastructure;
 using System.Data.SqlClient;
-using System.IO;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using KBVault.Dal;
 using KBVault.Dal.Entities;
 using KBVault.Dal.Repository;
 using KBVault.Web.Business.Articles;
-using KBVault.Web.Business.Categories;
 using KBVault.Web.Helpers;
 using KBVault.Web.Models;
-using NLog;
 using Resources;
 
 namespace KBVault.Web.Controllers

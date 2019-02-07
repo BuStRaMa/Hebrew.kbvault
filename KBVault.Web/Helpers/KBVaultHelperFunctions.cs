@@ -37,9 +37,9 @@ namespace KBVault.Web.Helpers
             }
         }
 
-        public static MvcHtmlString CreateCategoryMenu()
+        public static MvcHtmlString CreateCategoryMenu(bool isEditor = false, long userId = 1)
         {
-            return new MvcHtmlString(GetCategoryMenu(-1));
+            return new MvcHtmlString(GetCategoryMenu(-1, isEditor, userId));
         }
 
         public static MvcHtmlString CreateBootstrapCategoryMenu()
@@ -118,7 +118,21 @@ namespace KBVault.Web.Helpers
             }
         }
 
-        private static string GetCategoryMenu(long parentCategoryId = -1)
+        public static bool IsEditor(IPrincipal user)
+        {
+            try
+            {
+                var usr = UserAsKbUser(user);
+                return usr.Role == KbVaultAuthHelper.RoleEditor;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex);
+                throw;
+            }
+        }
+
+        private static string GetCategoryMenu(long parentCategoryId = -1, bool isEditor = false, long userId = 1)
         {
             try
             {
@@ -131,6 +145,11 @@ namespace KBVault.Web.Helpers
                 foreach (var model in categoryTree)
                 {
                     var categoryArticleListLink = linkHelper.Action("List", "Category", new { id = model.Id, page = 1 });
+                    if (isEditor)
+                    {
+                        categoryArticleListLink = linkHelper.Action("MyList", "Category", new { id = model.Id, page = 1, userId = userId });
+                    }
+
                     html.Append("<li class='treeview'>" + Environment.NewLine);
                     html.Append("<div>" + Environment.NewLine);
                     html.Append($"<a href='{categoryArticleListLink}'>");
@@ -139,7 +158,7 @@ namespace KBVault.Web.Helpers
                     html.Append("</div>" + Environment.NewLine);
                     if (model.Children.Count > 0)
                     {
-                        html.Append(GetCategoryMenu(model.Id));
+                        html.Append(GetCategoryMenu(model.Id, isEditor, userId));
                     }
 
                     html.Append("</li>" + Environment.NewLine);

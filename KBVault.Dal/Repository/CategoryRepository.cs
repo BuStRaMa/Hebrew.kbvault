@@ -78,6 +78,14 @@ namespace KBVault.Dal.Repository
             }
         }
 
+        public IList<Article> GetMyArticles(int categoryId, int userId)
+        {
+            using (var db = new KbVaultContext())
+            {
+                return db.Articles.Include(a => a.KbUser).Include(a => a.Attachments).Where(a => a.CategoryId == categoryId).Where(a => a.Author == userId).OrderBy(c => c.Title).ToList();
+            }
+        }
+
         public bool Remove(Category category)
         {
             using (var db = new KbVaultContext())

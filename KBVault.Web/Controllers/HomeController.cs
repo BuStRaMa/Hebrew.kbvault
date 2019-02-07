@@ -103,11 +103,14 @@ namespace KBVault.Web.Controllers
                 using (var db = new KbVaultContext())
                 {
                     var article = db.PublishedArticles().FirstOrDefault(a => a.SefName == id);
+                    var author = db.KbUsers.FirstOrDefault(a => a.Id == article.Author);
+
                     if (article != null)
                     {
                         article.Views++;
                         db.SaveChanges();
                         ViewBag.SimilarArticles = ArticleRepository.GetVisibleSimilarArticles((int)article.Id, DateTime.Today.Date);
+                        ViewBag.Author = author.Name + " " + author.LastName;
                         return View(article);
                     }
 

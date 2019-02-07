@@ -173,5 +173,32 @@ namespace KBVault.Web.Controllers
                 return RedirectToAction("Index", "Error");
             }
         }
+
+        public ActionResult MyList(int id, int page, int userId)
+        {
+            try
+            {
+                var cat = CategoryRepository.Get(id);
+                if (cat != null)
+                {
+                    var model = new CategoryListViewModel
+                    {
+                        CategoryName = cat.Name,
+                        CategoryId = cat.Id,
+                        Icon = cat.Icon,
+                        Articles = CategoryRepository.GetMyArticles(id, userId).ToPagedList(page, 20)
+                    };
+                    return View("List", model);
+                }
+
+                ShowOperationMessage(ErrorMessages.CategoryNotFound);
+                return RedirectToAction("Index", "Error");
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex);
+                return RedirectToAction("Index", "Error");
+            }
+        }
     }
 }

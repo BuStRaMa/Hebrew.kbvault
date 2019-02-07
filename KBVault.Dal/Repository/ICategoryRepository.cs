@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using KBVault.Dal.Entities;
 
 namespace KBVault.Dal.Repository
@@ -18,5 +16,6 @@ namespace KBVault.Dal.Repository
         IList<Category> GetFirstLevelCategories();
         bool HasArticleInCategory(int categoryId);
         IList<Article> GetArticles(int categoryId);
+        IList<Article> GetMyArticles(int categoryId, int userId);
     }
 }

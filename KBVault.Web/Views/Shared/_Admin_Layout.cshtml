@@ -69,7 +69,7 @@
         <aside class="left-side sidebar-offcanvas">
             <section class="sidebar">
                 <ul class="sidebar-menu">
-                    @if (KBVaultHelperFunctions.IsAdmin(Context.User) || KBVaultHelperFunctions.IsManager(Context.User))
+                    @if (KBVaultHelperFunctions.IsAdmin(Context.User))
                     {
                         <li>
                             <div>
@@ -95,18 +95,35 @@
                                 </a>
                             </div>
                         </li>
+
+                        <li class="treeview active">
+                            <div>
+                                <a href="#" class="trigger-item">
+                                    <i class="fa fa-folder"></i>
+                                    <span>@UIResources.LeftSidebarCategoryListTitle</span>
+                                </a>
+                            </div>
+
+                            @KBVaultHelperFunctions.CreateCategoryMenu(false, 1)
+
+                        </li>
                     }
-                    <li class="treeview active">
-                        <div>
-                            <a href="#" class="trigger-item">
-                                <i class="fa fa-folder"></i>
-                                <span>@UIResources.LeftSidebarCategoryListTitle</span>
-                            </a>
-                        </div>
 
-                        @KBVaultHelperFunctions.CreateCategoryMenu()
+                    @if (KBVaultHelperFunctions.IsEditor(Context.User))
+                    {
+                        <li class="treeview active">
+                            <div>
+                                <a href="#" class="trigger-item">
+                                    <i class="fa fa-folder"></i>
+                                    <span>@UIResources.LeftSidebarMyArticles</span>
+                                </a>
+                            </div>
 
-                    </li>
+                            @KBVaultHelperFunctions.CreateCategoryMenu(true, CurrentUserInfo.Id)
+
+                        </li>
+                    }
+
                     @if (KBVaultHelperFunctions.IsAdmin(Context.User))
                     {
                         <li>

@@ -6,9 +6,11 @@
 }
 <div class="row">
     <h2 class="section-title clearfix">
-        <span class="line"></span> @Model.Title      
-        <span class="small pull-right">@ViewBag.ArticlePrefix-@Model.Id</span>
-    </h2>    
+        <span class="line"></span> @Model.Title
+        <span class="small pull-right">@ViewBag.ArticlePrefix-@Model.Id</span> <br />
+    </h2>
+    <h4>נכתב ע"י </h4>
+    <h4> @ViewBag.Author </h4>
 </div>
 <div class="col-xs-9">
     <div class="row">       
@@ -17,7 +19,7 @@
             <a href='@Url.Action("Categories", "Home", new { id = Model.Category.SefName })'>@Model.Category.Name</a>
         </span>
         &nbsp;
-        @if( Context.Request.IsAuthenticated )
+        @if((Context.Request.IsAuthenticated && !KBVaultHelperFunctions.IsEditor(Context.User)) || (KBVaultHelperFunctions.IsEditor(Context.User) && Model.Author == KBVaultHelperFunctions.UserAsKbUser(Context.User).Id))
         {
             <a href='@Url.Action("Edit","Article",new {id=Model.Id})'><span class="fa fa-edit fa-fw"></span>@UIResources.PublicArticleDetailPageEditArticleLabel</a>
         }
