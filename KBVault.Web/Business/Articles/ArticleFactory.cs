@@ -18,6 +18,7 @@ namespace KBVault.Web.Business.Articles
             if (article != null)
             {
                 model.Author = UserRepository.Get(article.Author);
+                model.LastAuthorEdited = model.Author;
                 model.Category = new CategoryViewModel(article.Category);
                 model.Content = article.Content;
                 model.Created = article.Created ?? DateTime.Now;
@@ -30,7 +31,6 @@ namespace KBVault.Web.Business.Articles
                 model.Title = article.Title;
                 model.Tags = string.Join(",", article.ArticleTags.Select(at => at.Tag.Name).ToArray());
                 model.Attachments = article.Attachments.Select(t => new AttachmentViewModel(t)).ToList();
-                model.SefName = article.SefName;
             }
 
             return model;
@@ -48,7 +48,6 @@ namespace KBVault.Web.Business.Articles
                 Edited = DateTime.Now,
                 Title = articleViewModel.Title,
                 Content = articleViewModel.Content,
-                SefName = articleViewModel.SefName,
                 Author = userId
             };
             return article;

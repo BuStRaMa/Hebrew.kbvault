@@ -27,7 +27,6 @@ namespace KBVault.Dal.Repository
                 {
                     cat.Name = category.Name;
                     cat.IsHot = category.IsHot;
-                    cat.SefName = category.SefName;
                     cat.Author = category.Author;
                     cat.Parent = category.Parent;
                     cat.Icon = category.Icon;
