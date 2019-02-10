@@ -10,7 +10,7 @@
     @foreach (var result in Model.Results)
     {
         <div class="col-lg-12">
-            <i class="fa fa-arrow-circle-o-right"></i>&nbsp;<a href="@Url.Action("Detail", "Home", new { id = @result.ArticleSefName })">@result.ArticleTitle</a>            
+            <i class="fa fa-arrow-circle-o-right"></i>&nbsp;<a href="@Url.Action("Detail", "Home", new { id = @result.ArticleId })">@result.ArticleTitle</a>            
         </div>
     }
     @using (Html.BeginForm("Do", "Search", FormMethod.Post, new { id = "SearchForm" }))
