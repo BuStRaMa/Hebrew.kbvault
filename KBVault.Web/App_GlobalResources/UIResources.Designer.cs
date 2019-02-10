@@ -385,15 +385,6 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Search Engine Friendly Name.
-        /// </summary>
-        internal static string ArticleCreatePageSefNameLabel {
-            get {
-                return ResourceManager.GetString("ArticleCreatePageSefNameLabel", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Tags.
         /// </summary>
         internal static string ArticleCreatePageTagsLabel {
@@ -462,15 +453,6 @@ namespace Resources {
         internal static string ArticleLikeSuccess {
             get {
                 return ResourceManager.GetString("ArticleLikeSuccess", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Article search engine friendly name is required.
-        /// </summary>
-        internal static string ArticleSefNameIsRequired {
-            get {
-                return ResourceManager.GetString("ArticleSefNameIsRequired", resourceCulture);
             }
         }
         
@@ -637,15 +619,6 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Search Engine Friendly Name.
-        /// </summary>
-        internal static string CategoryCreateFormSefNameLabel {
-            get {
-                return ResourceManager.GetString("CategoryCreateFormSefNameLabel", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Edit category: {0}.
         /// </summary>
         internal static string CategoryEditFormPageTitle {
@@ -678,15 +651,6 @@ namespace Resources {
         internal static string CategoryPageEditSuccessMessage {
             get {
                 return ResourceManager.GetString("CategoryPageEditSuccessMessage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Category search engine friendly name is required.
-        /// </summary>
-        internal static string CategorySefNameIsRequired {
-            get {
-                return ResourceManager.GetString("CategorySefNameIsRequired", resourceCulture);
             }
         }
         

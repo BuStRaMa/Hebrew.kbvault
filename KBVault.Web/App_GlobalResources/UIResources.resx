@@ -378,17 +378,8 @@
   <data name="UserProfileUpdateSuccessful" xml:space="preserve">
     <value>Profile updated successfully</value>
   </data>
-  <data name="ArticleCreatePageSefNameLabel" xml:space="preserve">
+  <data name="ArticleCreatePage&#xD;&#xA;        Label" xml:space="preserve">
     <value>Search Engine Friendly Name</value>
-  </data>
-  <data name="ArticleSefNameIsRequired" xml:space="preserve">
-    <value>Article search engine friendly name is required</value>
-  </data>
-  <data name="CategoryCreateFormSefNameLabel" xml:space="preserve">
-    <value>Search Engine Friendly Name</value>
-  </data>
-  <data name="CategorySefNameIsRequired" xml:space="preserve">
-    <value>Category search engine friendly name is required</value>
   </data>
   <data name="PublicCategoryListPageTitle" xml:space="preserve">
     <value>Articles in {0}</value>

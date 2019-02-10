@@ -378,17 +378,8 @@
   <data name="UserProfileUpdateSuccessful" xml:space="preserve">
     <value>Perfil atualizado com sucesso.</value>
   </data>
-  <data name="ArticleCreatePageSefNameLabel" xml:space="preserve">
+  <data name="ArticleCreatePage&#xD;&#xA;        Label" xml:space="preserve">
     <value>Nome amigavel para engine de busca</value>
-  </data>
-  <data name="ArticleSefNameIsRequired" xml:space="preserve">
-    <value>Nome amigavel para engine de busca é origatório</value>
-  </data>
-  <data name="CategoryCreateFormSefNameLabel" xml:space="preserve">
-    <value>Nome amigavel para engine de busca</value>
-  </data>
-  <data name="CategorySefNameIsRequired" xml:space="preserve">
-    <value>Nome amigavel para engine de busca da categoria é obrigatório</value>
   </data>
   <data name="PublicCategoryListPageTitle" xml:space="preserve">
     <value>Artigos em {0}</value>

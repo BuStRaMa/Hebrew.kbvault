@@ -378,18 +378,6 @@
   <data name="UserProfileUpdateSuccessful" xml:space="preserve">
     <value>פרופיל עודכן בהצלחה</value>
   </data>
-  <data name="ArticleCreatePageSefNameLabel" xml:space="preserve">
-    <value>שם חיפוש ידידותי</value>
-  </data>
-  <data name="ArticleSefNameIsRequired" xml:space="preserve">
-    <value>שם חיפוש ידידותי חובה</value>
-  </data>
-  <data name="CategoryCreateFormSefNameLabel" xml:space="preserve">
-    <value>שם חיפוש ידידותי</value>
-  </data>
-  <data name="CategorySefNameIsRequired" xml:space="preserve">
-    <value>שם חיפוש ידידותי חובה</value>
-  </data>
   <data name="PublicCategoryListPageTitle" xml:space="preserve">
     <value>מאמרים ב{0}</value>
   </data>

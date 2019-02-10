@@ -378,17 +378,8 @@
   <data name="UserProfileUpdateSuccessful" xml:space="preserve">
     <value>Profil başarıyla güncellendi.</value>
   </data>
-  <data name="ArticleCreatePageSefNameLabel" xml:space="preserve">
+  <data name="ArticleCreatePage&#xD;&#xA;        Label" xml:space="preserve">
     <value>Arama motoru dostu isim</value>
-  </data>
-  <data name="ArticleSefNameIsRequired" xml:space="preserve">
-    <value>Makale için arama motoru dostu isim gereklidir.</value>
-  </data>
-  <data name="CategoryCreateFormSefNameLabel" xml:space="preserve">
-    <value>Arama motoru dostu isim</value>
-  </data>
-  <data name="CategorySefNameIsRequired" xml:space="preserve">
-    <value>Kategori arama motoru dostu ismi gereklidir.</value>
   </data>
   <data name="PublicCategoryListPageTitle" xml:space="preserve">
     <value>{0} kategorisindeki makaleler</value>
