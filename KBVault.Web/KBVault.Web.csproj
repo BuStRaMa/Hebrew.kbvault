@@ -587,7 +587,6 @@
     <Content Include="Assets\js\jquery\jquery-2-0-2.js" />
     <Content Include="Assets\js\jquery\jquery-ui-1-10-4.js" />
     <Content Include="Assets\js\plugins\jqueryForm\jquery.form.js" />
-    <Content Include="Assets\js\plugins\slug-it\jquery.slugit.js" />
     <Content Include="Assets\js\kbvault.js" />
     <Content Include="Assets\js\plugins\uploader\jquery.uploadfile.js" />
     <Content Include="Assets\js\bootstrap\bootstrap.js" />
@@ -767,6 +766,7 @@
     <Content Include="App_GlobalResources\UIResources.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>UIResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="App_GlobalResources\CommonResources.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
@@ -800,6 +800,7 @@
     <Content Include="App_GlobalResources\UIResources.tr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>UIResources.tr.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -820,6 +821,7 @@
     <Content Include="App_GlobalResources\UIResources.he.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>UIResources.he.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <PropertyGroup>

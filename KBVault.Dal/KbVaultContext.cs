@@ -119,9 +119,7 @@ namespace KBVault.Dal
                     };
 
                     this.Database.ExecuteSqlCommand(
-                        "Insert Into Activities(UserId,ActivityDate,Operation,Information) " +
-                        "Values(@1,@2,@3,@4 )",
-                        procParams.ToArray());
+                        "Insert Into Activities(UserId,ActivityDate,Operation,Information) " + "Values(@1,@2,@3,@4 )", procParams.ToArray());
                     /*
                     switch (entry.State)
                     {
@@ -166,10 +164,6 @@ namespace KBVault.Dal
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Article>()
-                .Property(e => e.SefName)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Article>()
                 .HasMany(e => e.ArticleTags)
                 .WithRequired(e => e.Article)
                 .WillCascadeOnDelete(false);
@@ -181,10 +175,6 @@ namespace KBVault.Dal
 
             modelBuilder.Entity<Attachment>()
                 .Property(e => e.MimeType)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Category>()
-                .Property(e => e.SefName)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Category>()

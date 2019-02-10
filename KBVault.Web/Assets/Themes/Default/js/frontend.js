@@ -95,7 +95,10 @@ function BindSearchLoadMore() {
             var results = data.Data.Results;
             $.each(results, function (key, value) {
                 var htmlText = " <div class=\"col-lg-12\">";
-                htmlText += "<a href='/home/detail/" + value.ArticleSefName + "'>" + value.ArticleTitle + "</a>";
+                htmlText += "<a href='/home/detail/" + value.Article
+
+
+                    + "'>" + value.ArticleTitle + "</a>";
                 htmlText += "</div>";
                 $("#SearchResultContainer").append(htmlText);                
             });

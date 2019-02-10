@@ -24,10 +24,6 @@ namespace KBVault.Dal.Entities
 
         public int? Parent { get; set; }
 
-        [Required]
-        [StringLength(200)]
-        public string SefName { get; set; }
-
         public long Author { get; set; }
 
         public string Icon { get; set; }

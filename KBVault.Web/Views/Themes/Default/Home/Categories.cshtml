@@ -14,7 +14,7 @@
             <small class="pull-right">
                 @if( ViewBag.Category.ParentCategory != null )
                 {
-                    <a class="text-muted" href="@Url.Action("Categories","Home",new { id = ViewBag.Category.ParentCategory.SefName})">@ViewBag.Category.ParentCategory.Name</a>
+                    <a class="text-muted" href="@Url.Action("Categories","Home",new { id = ViewBag.Category.ParentCategory.Id})">@ViewBag.Category.ParentCategory.Name</a>
                     <i class="fa fa-angle-double-up"></i>
                 }
             </small>
@@ -25,7 +25,7 @@
         @foreach (Category subCategory in ViewBag.Category.ChildCategories)
         {
             <div class="col-xs-4">
-                <i class="fa fa-folder-open-o fa-fw text-muted"></i><a href="@Url.Action("Categories", "Home", new { id = subCategory.SefName })">@subCategory.Name</a>
+                <i class="fa fa-folder-open-o fa-fw text-muted"></i><a href="@Url.Action("Categories", "Home", new { id = subCategory.Id })">@subCategory.Name</a>
             </div>
         }
     </div>
@@ -43,7 +43,7 @@
             {
                 <li>
                     <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
-                     <a href='@Url.Action("Detail","Home",new {id=article.SefName})'>@article.Title</a>
+                     <a href='@Url.Action("Detail","Home",new {id=article.Id})'>@article.Title</a>
                 </li>
             }
         </ul>

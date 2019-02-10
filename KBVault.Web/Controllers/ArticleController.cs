@@ -79,12 +79,11 @@ namespace KBVault.Web.Controllers
         [HttpPost]
         [ValidateInput(false)]
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Edit([Bind(Exclude = "Category.Name,Category.SefName")]ArticleViewModel model)
+        public ActionResult Edit([Bind(Exclude = "Category.Name")]ArticleViewModel model)
         {
             try
             {
                 ModelState.Remove("Category.Name");
-                ModelState.Remove("Category.SefName");
                 if (ModelState.IsValid)
                 {
                     if (model.PublishEndDate < model.PublishStartDate)
@@ -101,8 +100,7 @@ namespace KBVault.Web.Controllers
                         article.Edited = DateTime.Now;
                         article.Title = model.Title;
                         article.Content = model.Content;
-                        article.Author = KBVaultHelperFunctions.UserAsKbUser(User).Id;
-                        article.SefName = model.SefName;
+                        article.LastAuthorEdited = KBVaultHelperFunctions.UserAsKbUser(User).Id;
                         ArticleRepository.Update(article, model.Tags);
                         if (article.IsDraft == 0)
                         {
@@ -142,12 +140,11 @@ namespace KBVault.Web.Controllers
         [HttpPost]
         [ValidateInput(false)]
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Create([Bind(Exclude = "Category.Name,Category.SefName")]ArticleViewModel model)
+        public ActionResult Create([Bind(Exclude = "Category.Name")]ArticleViewModel model)
         {
             try
             {
                 ModelState.Remove("Category.Name");
-                ModelState.Remove("Category.SefName");
                 if (ModelState.IsValid)
                 {
                     var article = ArticleFactory.CreateArticleFromViewModel(model, KBVaultHelperFunctions.UserAsKbUser(User).Id);

@@ -35,9 +35,6 @@ namespace KBVault.Web.Models
         public int ParentId { get; set; }
         public string NameForDroplist { get; set; }
 
-        [Required(ErrorMessageResourceType=typeof(UIResources), ErrorMessageResourceName="CategorySefNameIsRequired")]
-        public string SefName { get; set; }
-
         public string Icon { get; set; }
     }
 }

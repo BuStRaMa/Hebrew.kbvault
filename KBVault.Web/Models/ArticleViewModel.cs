@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using KBVault.Dal;
-
 using Resources;
 using KbUser = KBVault.Dal.Entities.KbUser;
 
@@ -36,9 +31,9 @@ namespace KBVault.Web.Models
         [Required(ErrorMessageResourceType = typeof(UIResources), ErrorMessageResourceName = "ArticleCreatePagePublishEndRequiredMessage")]
         public DateTime PublishEndDate { get; set; }
 
-        [Required(ErrorMessageResourceType = typeof(UIResources), ErrorMessageResourceName = "ArticleSefNameIsRequired")]
-        public string SefName { get; set; }
         public KbUser Author { get; set; }
+        public KbUser LastAuthorEdited { get; set; }
+
         public CategoryViewModel Category { get; set; }
     }
 }

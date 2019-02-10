@@ -39,11 +39,9 @@ namespace KBVault.Dal.Entities
 
         public long Author { get; set; }
 
-        public int CategoryId { get; set; }
+        public long LastAuthorEdited { get; set; }
 
-        [Required]
-        [StringLength(200)]
-        public string SefName { get; set; }
+        public int CategoryId { get; set; }
 
         public virtual KbUser KbUser { get; set; }
 

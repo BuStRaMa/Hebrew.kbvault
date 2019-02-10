@@ -83,7 +83,7 @@
                                         {
                                             <li>
                                                 <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
-                                                @Html.ActionLink(article.Title, "Detail", "Home", new { id = article.SefName }, null);
+                                                @Html.ActionLink(article.Title, "Detail", "Home", new { id = article.Id }, null);
                                             </li>
                                         }
                                     </ul>
@@ -105,7 +105,7 @@
                                     {
                                         <li>
                                             <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
-                                            <a href='@Url.Action("Detail", "Home", new { id = article.SefName })'>@article.Title</a>
+                                            <a href='@Url.Action("Detail", "Home", new { id = article.Id })'>@article.Title</a>
                                         </li>
                                     }
                                 </ul>
@@ -121,7 +121,7 @@
                                     {
                                         <li>
                                             <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
-                                            <a href='@Url.Action("Detail", "Home", new { id = article.SefName })'>@article.Title</a>
+                                            <a href='@Url.Action("Detail", "Home", new { id = article.Id })'>@article.Title</a>
                                         </li>
                                     }
                                 </ul>
@@ -137,7 +137,7 @@
                     {
                         <div class="row">
                             <i class="fa fa-arrow-circle-o-right text-muted"></i>
-                            <a href="@Url.Action("Categories", "Home", new { id = category.SefName })">@category.Name</a>
+                            <a href="@Url.Action("Categories", "Home", new { id = category.Id })">@category.Name</a>
                             @* <span class="badge">@category.Articles.Count</span> *@
 
                         </div>

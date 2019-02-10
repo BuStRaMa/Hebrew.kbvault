@@ -41,7 +41,7 @@ namespace KBVault.Web.Controllers
 
                         if (article != null)
                         {
-                            return RedirectToRoute("Default", new { controller = "Home", action = "Detail", id = article.SefName });
+                            return RedirectToRoute("Default", new { controller = "Home", action = "Detail", id = article.Id });
                         }
                     }
                 }

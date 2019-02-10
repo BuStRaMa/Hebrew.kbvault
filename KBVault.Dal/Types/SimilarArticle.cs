@@ -7,7 +7,6 @@ namespace KBVault.Dal.Types
     public class SimilarArticle
     {
         public long? Id { get; set; }
-        public string SefName { get; set; }
         public string Title { get; set; }
         public DateTime PublishEndDate { get; set; }
         public DateTime PublishStartDate { get; set; }

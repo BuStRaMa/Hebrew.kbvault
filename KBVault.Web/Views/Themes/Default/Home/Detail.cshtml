@@ -7,16 +7,15 @@
 <div class="row">
     <h2 class="section-title clearfix">
         <span class="line"></span> @Model.Title
-        <span class="small pull-right">@ViewBag.ArticlePrefix-@Model.Id</span> <br />
+        <span class="small pull-right col-xs-offset-1">@ViewBag.ArticlePrefix-@Model.Id</span> <br />
     </h2>
-    <h4>נכתב ע"י </h4>
-    <h4> @ViewBag.Author </h4>
+    
 </div>
 <div class="col-xs-9">
     <div class="row">       
         <span>
             <i class="fa fa-folder-open-o fa-fw text-muted"></i>        
-            <a href='@Url.Action("Categories", "Home", new { id = Model.Category.SefName })'>@Model.Category.Name</a>
+            <a href='@Url.Action("Categories", "Home", new { id = Model.Category.Id })'>@Model.Category.Name</a>
         </span>
         &nbsp;
         @if((Context.Request.IsAuthenticated && !KBVaultHelperFunctions.IsEditor(Context.User)) || (KBVaultHelperFunctions.IsEditor(Context.User) && Model.Author == KBVaultHelperFunctions.UserAsKbUser(Context.User).Id))
@@ -74,21 +73,27 @@
 <!-- 
     RIGHT SIDEBAR 
 -->
-<div class="col-xs-2">  
-    <div class="row clearfix"> 
+<div class="col-xs-2">
+    <div class="row clearfix" style="margin-bottom:25%">
+        <h4 class="section-title"> נכתב ע"י: </h4>
+        <h4 style="margin-bottom:15%"> @ViewBag.Author </h4>
+        <h5 class="section-title">נערך לאחרונה ע"י </h5>
+        <h5> @ViewBag.LastAuthorEdited </h5>
+    </div>
+
+    <div class="row clearfix">
         @Html.AntiForgeryToken()
         <a href="javascript:void(0)" data-id="@Model.Id" data-action="@Url.Action("Like")" class="btn-like-action btn btn-default"><i class="fa fa-fw fa-thumbs-o-up"></i>@UIResources.PublicILikeThis</a>
     </div>
-   
-    
-    @if( ViewBag.SimilarArticles != null )
-    { 
+
+    @if (ViewBag.SimilarArticles != null)
+    {
         <div class="row margin-10 clearfix">
             <h4 class="section-title"><span class="line"></span>@UIResources.PublicSimilarArticlesTitle</h4>
             <!-- SIMILAR ARTICLES -->
             @foreach (var article in ViewBag.SimilarArticles)
             {
-                <a class="btn-similar-article"  href='@Url.Action("Detail","Home",new{id=article.SefName})'>
+                <a class="btn-similar-article" href='@Url.Action("Detail","Home",new{id=article.SefName})'>
                     @article.Title
                 </a>
             }
@@ -98,7 +103,7 @@
     <div class="clearfix margin-10">
         @if (!string.IsNullOrEmpty(ViewBag.ShareThisPublicKey))
         {
-            <script type="text/javascript"> var switchTo5x = false; </script>
+            <script type="text/javascript">var switchTo5x = false;</script>
             <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
             <script type="text/javascript">
                 stLight.options({ publisher: "@ViewBag.ShareThisPublicKey", doNotHash: false, doNotCopy: false, hashAddressBar: true });
@@ -119,15 +124,15 @@
     </div>
     <div class="clearfix">&nbsp;</div>
     <div class="clearfix margin-10">
-        <h4 class="section-title "><span class="line"></span>Tags</h4> 
+        <h4 class="section-title "><span class="line"></span>Tags</h4>
         @foreach (var tag in Model.ArticleTags)
         {
-             <a class="btn-xs btn btn-primary" href='@Url.Action("Tags","Home",new{id=tag.Tag.Name})'>
+            <a class="btn-xs btn btn-primary" href='@Url.Action("Tags","Home",new{id=tag.Tag.Name})'>
                 @tag.Tag.Name
-             </a> 
+            </a>
         }
     </div>
-    
+
 </div>
     
 

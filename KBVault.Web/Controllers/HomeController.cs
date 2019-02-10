@@ -72,20 +72,20 @@ namespace KBVault.Web.Controllers
             }
         }
 
-        public ActionResult Categories(string id, int page = 1)
+        public ActionResult Categories(long id, int page = 1)
         {
             try
             {
                 using (var db = new KbVaultContext())
                 {
-                    var cat = db.Categories.Include("ChildCategories").Include("ParentCategory").First(c => c.SefName == id);
+                    var cat = db.Categories.Include("ChildCategories").Include("ParentCategory").First(c => c.Id == id);
                     if (cat == null)
                     {
                         return View("CategoryNotFound");
                     }
 
                     ViewBag.Category = cat;
-                    IList<Article> articles = db.PublishedArticles().Where(a => a.Category.SefName == id).OrderBy(a => a.Title).ToPagedList(page, ArticleCountPerPage);
+                    IList<Article> articles = db.PublishedArticles().Where(a => a.Category.Id == id).OrderBy(a => a.Title).ToPagedList(page, ArticleCountPerPage);
                     return View(articles);
                 }
             }
@@ -96,14 +96,15 @@ namespace KBVault.Web.Controllers
             }
         }
 
-        public ActionResult Detail(string id)
+        public ActionResult Detail(long id)
         {
             try
             {
                 using (var db = new KbVaultContext())
                 {
-                    var article = db.PublishedArticles().FirstOrDefault(a => a.SefName == id);
-                    var author = db.KbUsers.FirstOrDefault(a => a.Id == article.Author);
+                    var article = db.PublishedArticles().FirstOrDefault(a => a.Id == id);
+                    var author = article.KbUser;
+                    var lastAuthorEdited = db.KbUsers.FirstOrDefault(a => a.Id == article.LastAuthorEdited);
 
                     if (article != null)
                     {
@@ -111,6 +112,7 @@ namespace KBVault.Web.Controllers
                         db.SaveChanges();
                         ViewBag.SimilarArticles = ArticleRepository.GetVisibleSimilarArticles((int)article.Id, DateTime.Today.Date);
                         ViewBag.Author = author.Name + " " + author.LastName;
+                        ViewBag.LastAuthorEdited = lastAuthorEdited.Name + " " + lastAuthorEdited.LastName;
                         return View(article);
                     }
 

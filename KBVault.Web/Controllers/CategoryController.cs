@@ -32,7 +32,7 @@ namespace KBVault.Web.Controllers
                 if (ModelState.IsValid)
                 {
                     var parentId = model.ParentId > 0 ? model.ParentId : (int?)null;
-                    var category = CategoryFactory.CreateCategory(model.Name, model.IsHot, model.SefName, model.Icon, KBVaultHelperFunctions.UserAsKbUser(User).Id, parentId);
+                    var category = CategoryFactory.CreateCategory(model.Name, model.IsHot, model.Icon, KBVaultHelperFunctions.UserAsKbUser(User).Id, parentId);
                     var catId = CategoryRepository.Add(category);
                     ShowOperationMessage(@UIResources.CategoryPageCreateSuccessMessage);
                     return RedirectToAction("List", new { id = catId, page = 1 });
@@ -125,7 +125,7 @@ namespace KBVault.Web.Controllers
                     {
                         var parentId = model.ParentId > 0 ? model.ParentId : (int?)null;
                         var author = KBVaultHelperFunctions.UserAsKbUser(User).Id;
-                        var category = CategoryFactory.CreateCategory(model.Name, model.IsHot, model.SefName, model.Icon, author, parentId);
+                        var category = CategoryFactory.CreateCategory(model.Name, model.IsHot, model.Icon, author, parentId);
                         category.Id = model.Id;
                         CategoryRepository.Update(category);
                         ShowOperationMessage(UIResources.CategoryPageEditSuccessMessage);

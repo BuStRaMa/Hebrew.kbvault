@@ -58,6 +58,22 @@
     <Compile Include="Migrations\201901091725079_LockSite.Designer.cs">
       <DependentUpon>201901091725079_LockSite.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902101650570_LastAuthorEdited.cs" />
+    <Compile Include="Migrations\201902101650570_LastAuthorEdited.Designer.cs">
+      <DependentUpon>201902101650570_LastAuthorEdited.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902101716219_LastAuthorEdited1.cs" />
+    <Compile Include="Migrations\201902101716219_LastAuthorEdited1.Designer.cs">
+      <DependentUpon>201902101716219_LastAuthorEdited1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902101726268_LastAuthorEdited2.cs" />
+    <Compile Include="Migrations\201902101726268_LastAuthorEdited2.Designer.cs">
+      <DependentUpon>201902101726268_LastAuthorEdited2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902101932455_Deleted SefName.cs" />
+    <Compile Include="Migrations\201902101932455_Deleted SefName.Designer.cs">
+      <DependentUpon>201902101932455_Deleted SefName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repository\ISettingsRepository.cs" />
     <Compile Include="Repository\SettingsRepository.cs" />
@@ -95,6 +111,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201901091725079_LockSite.resx">
       <DependentUpon>201901091725079_LockSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902101650570_LastAuthorEdited.resx">
+      <DependentUpon>201902101650570_LastAuthorEdited.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902101716219_LastAuthorEdited1.resx">
+      <DependentUpon>201902101716219_LastAuthorEdited1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902101726268_LastAuthorEdited2.resx">
+      <DependentUpon>201902101726268_LastAuthorEdited2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902101932455_Deleted SefName.resx">
+      <DependentUpon>201902101932455_Deleted SefName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

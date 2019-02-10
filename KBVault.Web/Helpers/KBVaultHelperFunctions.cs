@@ -242,7 +242,7 @@ namespace KBVault.Web.Helpers
                         html.Append("<li>" + Environment.NewLine);
                     }
 
-                    var categoryListLink = linkHelper.Action("Categories", "Home", new { id = model.SefName });
+                    var categoryListLink = linkHelper.Action("Categories", "Home", new { id = model.Id });
                     html.Append($"<a href='{categoryListLink}'>{model.Name}</a>");
                     html.Append(Environment.NewLine);
                     if (model.Children.Count > 0)
@@ -278,7 +278,6 @@ namespace KBVault.Web.Helpers
                         {
                             Id = cat.Id,
                             Name = cat.Name,
-                            SefName = cat.SefName,
                             Icon = string.IsNullOrEmpty(cat.Icon) ? "angle-double-right" : cat.Icon,
                             NameForDroplist = cat.Name.PadLeft(cat.Name.Length + depth, '-'),
                             Children = GetCategories(cat.Id, depth + 2)
