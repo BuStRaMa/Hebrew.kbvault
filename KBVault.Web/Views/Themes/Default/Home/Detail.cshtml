@@ -18,9 +18,11 @@
             <a href='@Url.Action("Categories", "Home", new { id = Model.Category.Id })'>@Model.Category.Name</a>
         </span>
         &nbsp;
-        @if((Context.Request.IsAuthenticated && !KBVaultHelperFunctions.IsEditor(Context.User)) || (KBVaultHelperFunctions.IsEditor(Context.User) && Model.Author == KBVaultHelperFunctions.UserAsKbUser(Context.User).Id))
-        {
-            <a href='@Url.Action("Edit","Article",new {id=Model.Id})'><span class="fa fa-edit fa-fw"></span>@UIResources.PublicArticleDetailPageEditArticleLabel</a>
+        @if(Context.Request.IsAuthenticated) {
+            if(!KBVaultHelperFunctions.IsEditor(Context.User) || (KBVaultHelperFunctions.IsEditor(Context.User) && Model.Author == KBVaultHelperFunctions.UserAsKbUser(Context.User).Id))
+            {   
+                <a href='@Url.Action("Edit","Article",new {id=Model.Id})'><span class="fa fa-edit fa-fw"></span>@UIResources.PublicArticleDetailPageEditArticleLabel</a>
+            }
         }
        
         <div class="margin-10">           
