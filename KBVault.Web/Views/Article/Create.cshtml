@@ -1,11 +1,13 @@
 ﻿@model KBVault.Web.Models.ArticleViewModel
 
 @{
-    if(KBVaultHelperFunctions.UserAsKbUser(Context.User).Id != Model.Author.Id)
+    if(!KBVaultHelperFunctions.IsAdmin(Context.User))
     {
-        Response.Redirect("/Dashboard");
+        if(KBVaultHelperFunctions.UserAsKbUser(Context.User).Id != Model.Author.Id)
+        {
+            Response.Redirect("/Dashboard");
+        }   
     }
-
     if (Model.Category.Name != "-")
     {
         if (Model.Id > 0)
