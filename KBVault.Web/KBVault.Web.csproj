@@ -656,6 +656,7 @@
     <Content Include="BackupArchives\index.html" />
     <Content Include="Global.asax" />
     <Content Include="Install\default_kbvault.sql" />
+    <Content Include="Install\Update_0.2.sql" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
