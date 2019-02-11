@@ -5,18 +5,17 @@
  <h2> פיצ'רים </h2>
  <li> Bootstrap framework both for backend and frontend visual stuff.
  <li> משתמש בMSSQL
- <li> שימוש בעורך HTML קל לשימוש ([TinyMCE](https://www.tiny.cloud/))
- <li> Scheduled publishing ( Specify article publication date and expiry date )
- <li> Save articles as draft
- <li> Keep track of article views and likes
- <li> Sharing of articles via ShareThis
- <li> Search via Lucene Library and rebuild indexes
- <li> Suggest matching articles via autocomplete during search
- <li> Tags for articles
+<li> שימוש בעורך HTML קל לשימוש <a href="www.tiny.cloud">TinyMCE</a>
+ <li> פרסום מאמר לפי תאריך
+ <li> שמירת מאמרים כטיוטות
+ <li> מעקב אחר לייקים וצפיות במאמר
+ <li> חיפוש בעזרת Lucene Index
+ <li> הצעות למאמרים דומים בחיפוש
+ <li> תגיות עבור המאמרים
  <li> Tag cloud on landing page
- <li> Attaching files to articles via uploadify
- <li> Once logged in, add new articles and change existing ones while browsing site.
- <li> Let visitors comment articles via Disqus
+ <li> העלאת קבצים למאמרים בעזרת uploadify
+ <li> לאחר ההתחברות, תוכל להוסיף מאמרים ולערוך בהתאם להרשאה
+ <li> אופציה להגיב באמצעות Disqus
  <li> SEO friendly article pages
  <li> Admin interface using [Admin LTE](http://almsaeedstudio.com/AdminLTE)
  <li> Nested categories and multi level menu via [SmartMenus](https://github.com/vadikom/smartmenus)
