@@ -1,8 +1,12 @@
 USE [kbvault]
 GO
 ALTER TABLE [dbo].[Article] ADD [LastAuthorEdited] bigint NOT NULL DEFAULT 1
-ALTER TABLE [dbo].[Article] DROP [SefName]
-ALTER TABLE [dbo].[Category] DROP [SefName]
+
+ALTER TABLE [dbo].[Article] DROP CONSTRAINT UNQ_ARTICLE_SEFNAME
+ALTER TABLE [dbo].[Article] DROP column [SefName]
+
+ALTER TABLE [dbo].[Category] DROP CONSTRAINT UNQ_CATEGORY_SEFNAME
+ALTER TABLE [dbo].[Category] DROP column [SefName]
 
 USE [kbvault]
 GO
