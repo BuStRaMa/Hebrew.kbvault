@@ -4,8 +4,8 @@
  
  <h2> פיצ'רים </h2>
  <li> Bootstrap framework both for backend and frontend visual stuff.
- <li> Uses MSSQL (SQL Express Edition| Developer Edition|....)
- <li> Easy to use HTML Editor ([TinyMCE](https://www.tiny.cloud/))
+ <li> משתמש בMSSQL
+ <li> שימוש בעורך HTML קל לשימוש ([TinyMCE](https://www.tiny.cloud/))
  <li> Scheduled publishing ( Specify article publication date and expiry date )
  <li> Save articles as draft
  <li> Keep track of article views and likes
