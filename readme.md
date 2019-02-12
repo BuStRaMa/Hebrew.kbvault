@@ -4,7 +4,7 @@ KBVault היא חינמית, פשוטה אך יעילה וקלה לשימוש
   <br>
  ניתן לראות דוגמא חיה בקישור הבא: <a href="http://kbvault.gear.host/"> Live KBVault </a> <br>
  האתר מתארח באתר אשר מאפשר העלאה חינמית של אתרים (כמובן מוגבל): GearHost
- <a href="https://www.gearhost.com"> <img src="https://i.imgur.com/9olQugZ.png" /> </a>
+ <a href="https://www.gearhost.com" target="_blank"> <img src="https://i.imgur.com/9olQugZ.png" /> </a> <br>
 ! נא לא לשנות סיסמה על מנת שאנשים יוכלו להמשיך לנסות את המערכת
  <br>
  משתמש עורך לדוגמא:
