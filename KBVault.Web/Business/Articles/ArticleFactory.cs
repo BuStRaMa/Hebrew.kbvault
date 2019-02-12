@@ -18,7 +18,7 @@ namespace KBVault.Web.Business.Articles
             if (article != null)
             {
                 model.Author = UserRepository.Get(article.Author);
-                model.LastAuthorEdited = model.Author;
+                model.LastAuthorEdited = UserRepository.Get(article.Author);
                 model.Category = new CategoryViewModel(article.Category);
                 model.Content = article.Content;
                 model.Created = article.Created ?? DateTime.Now;
@@ -48,7 +48,8 @@ namespace KBVault.Web.Business.Articles
                 Edited = DateTime.Now,
                 Title = articleViewModel.Title,
                 Content = articleViewModel.Content,
-                Author = userId
+                Author = userId,
+                LastAuthorEdited = userId
             };
             return article;
         }
